@@ -1,0 +1,84 @@
+<!--Change Subscription HTML-->
+<!DOCTYPE html>
+<html lang="en">
+
+<!--WebLink: none
+https://medium.com/5000-things/learning-from-lego-a-step-forward-in-modular-web-design-d8ff953f45a8-->
+
+<head>
+  <title>Account</title>
+  <meta charset = "utf-8"/>
+  <link rel = "stylesheet" type="text/css" href="..//flex.css">
+  <link rel = "stylesheet" type="text/css" href="..//menu.css">
+  <link rel = "stylesheet" type="text/css" href="..//css/overlay.css">
+  <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="..//subSite.js"></script>
+  <script src="..//menu.js"></script>
+</head>
+
+<body>
+  <!--Menu-->
+  <div class="topnav" id="myTopnav">
+    <a href="#" class="active">Home</a>
+    <a href="http://mark-angell.com/html/projectpages/billingsitemodule/userSubscriptionManagment.html">Account</a>
+    <a href="http://mark-angell.com/html/projects.html"><i class="fa fa-sign-in"></i> Exit Demo</a> <!--Needs to be set to web link on live version-->
+    <a href="javascript:void(0);" class="icon" onclick="menuFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+  <div class="wrap">
+    <h2 class="title">
+      Change Subscription
+    </h2>
+    <!--<button class="btn-show">Toggle Border</button>-->
+    <div class="container card">
+      <div class="flex row structure">
+        <div class="flex row structure-1">
+          <div class="flex element h">
+            <div class="content">
+              Subscription Types<br><!--Invoices section-->
+              <h6>Elite $299 <button class="#">Upgrade</button><br>
+              Pro $199 <button class="#">Upgrade</button><br>
+              Basic $99 <br>
+              Lite FREE <button class="#">Downgrade</button> <br>
+              Cancel Account <button id="cancelBtn">Cancel</button> <br>
+              </h6>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Cancel Button-->
+    <div id="cancelModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Cancel Account</h2>
+        </div>
+        <div class="topnav">
+        </div>
+        <div class="modal-body">
+          <p>Will be sad to see you go!<br><br>
+          If there is anything we can do, please feel free to reach out to support@company.com or call us at 000-000-0000. <br><br>
+          If you would like to stay, will take 10% off your next purchase or renewal! <br><br>
+          Take 10% off! <button id="cancelBtn">Stay</button> <br><br>
+
+          Note: Your account will cancel upon its scheduled renewal date. You will have access for the remainder of your time.<br>
+                Once cancelled, all data within your account could be deleted and non-recoverable.<br>
+                Cancel Account <button id="cancelBtn">Cancel</button> <br></p>
+        </div>
+        <div class="modal-footer">
+          <h3></h3>
+        </div>
+      </div>
+    </div>
+<script src="..//js/cancel.js"></script>
+
+</body>
+
+</html>

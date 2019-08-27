@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--WebLink: none
+https://medium.com/5000-things/learning-from-lego-a-step-forward-in-modular-web-design-d8ff953f45a8-->
+
+<head>
+  <title>Account</title>
+  <meta charset = "utf-8"/>
+  <link rel = "stylesheet" type="text/css" href="flex.css">
+  <link rel = "stylesheet" type="text/css" href="menu.css">
+  <link rel = "stylesheet" type="text/css" href="css/overlay.css">
+  <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="subSite.js"></script>
+  <script src="menu.js"></script>
+  <script src="js/overlay.js"></script>
+  <script src="js/ccOverlay.js"></script>
+
+</head>
+
+<body>
+
+<div class="topnav" id="myTopnav">
+  <a href="#" class="active">Home</a>
+  <a href="http://mark-angell.com/html/projectpages/billingsitemodule/userSubscriptionManagment.html">Account</a>
+  <a href="http://mark-angell.com/html/projects.html"><i class="fa fa-sign-in"></i> Exit Demo</a> <!--Needs to be set to web link on live version-->
+  <a href="javascript:void(0);" class="icon" onclick="menuFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<div class="wrap">
+  <h2 class="title">
+    Account Managment
+  </h2>
+  <!--<button class="btn-show">Toggle Border</button>-->
+  <div class="container card">
+    <div class="flex row structure">
+      <div class="flex row structure-1">
+        <div class="flex element a">
+          <div class="content" id="myBtn">
+            View Invoices<br><!--Invoices section-->
+            <h6>11-21-2018 - Invoice #<a href="#">152438</a><br>
+            10-21-2018 - Invoice #<a href="#">152437</a><br>
+            09-21-2018 - Invoice #<a href="#">152436</a><br>
+            <button class="btn" onclick="invoiceOverlay()">View More Invoices</button></h6>
+          </div>
+        </div>
+        <!--Add-ons section-->
+        <div class="flex element b">
+          <div class="content">
+            Purchase Add-ons
+            <h6>Add-on 1 <button class="#">Add</button><br>
+              Add-on 2 <button class="#">Add</button><br>
+              Add-on 3 <button class="#">Add</button><br>
+              Add-on 4 <button class="#">Add</button><br></h6>
+          </div>
+        </div>
+        <!--Update CC section-->
+        <div class="flex col structure-1-2-1">
+          <div class="flex element c">
+            <div class="content" id="ccBtn">
+              Update Billing Info
+              <h6>Update Card <button class="btn" onclick="ccOverlay()">Update</button><br></h6>
+            </div>
+          </div>
+          <!--Manage Subscriptions Section-->
+          <div class="flex element d">
+            <div class="content">
+              Manage Subscriptions
+              <h6>Basic $99 <a href="html/changeSub.html">Change</a><br>
+                  Add-on 1 <button class="#">Remove</button></h6>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Begin Buttons-->
+<!--View More Invoices Button-->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Invoices</h2>
+    </div>
+    <div class="topnav">
+    <input type="text" placeholder="Search by Invoice #..">
+    Date: <input type="date" name="bday">
+    <button type="submit"><i class="fa fa-search"></i></button>
+    </div>
+    <div class="modal-body">
+      <p>11-21-2018 - Invoice #<a href="#">152438</a><br>
+      10-21-2018 - Invoice #<a href="#">152437</a><br>
+      09-21-2018 - Invoice #<a href="#">152436</a><br></p>
+    </div>
+    <div class="modal-footer">
+      <h3></h3>
+    </div>
+  </div>
+</div>
+
+
+<!--Upate CC Button-->
+<div id="ccModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Update Billing</h2>
+    </div>
+    <div class="topnav">
+    </div>
+    <div class="modal-body">
+      <p>Card Number: <input type="text" name="ccNumber"><br>
+      CVV Code: <input type="text" name="cvvCode"><br>
+      Date: <input type="date" name="expireDate"><br></p>
+      <!--<button onclick="myFunction()">Try it</button>
+      <p id="demo"></p>
+
+      <script>
+      var fruits = ["Banana", "Orange", "Apple", "Mango"];
+      document.getElementById("demo").innerHTML = fruits;
+
+      function myFunction() {
+        fruits[fruits.length] = "Lemon";
+        document.getElementById("demo").innerHTML = fruits;
+      }-->
+</script>
+    </div>
+    <div class="modal-footer">
+      <h3></h3>
+    </div>
+  </div>
+</div>
+<!--<script src="js/ccOverlay.js"></script>-->
+
+</body>
+</html>
